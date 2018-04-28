@@ -1,0 +1,19 @@
+{
+  "name": "tokyo-night-miku-live",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/magcho/tokyo-night-miku-live.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/magcho/tokyo-night-miku-live/issues"
+  },
+  "homepage": "https://github.com/magcho/tokyo-night-miku-live#readme"
+}
