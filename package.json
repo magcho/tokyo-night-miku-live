@@ -4,7 +4,19 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "serve": "browser-sync start --server --serveStatic dist --files 'css/*.css, js/*.js, *.html'",
+    "build": "npm run build:sass & npm run build:pug",
+    "build:sass": "node-sass --include-path scss scss/style.scss css/style.css",
+    "build:pug": "pug ./pug -o ./",
+    "watch": "npm run serve & npm run watch:sass & npm run watch:pug",
+    "watch:sass": "nodemon -e scss -x \"npm run build:sass\"",
+    "watch:pug": "nodemon -e pug -x \"npm run build:pug\"",
+    "release": "",
+    "release:cass": "",
+    "release:pug": "pug *.pug",
+    "ws": "ws",
+    "pug": "pug",
+    "sass": "node-sass"
   },
   "repository": {
     "type": "git",
@@ -15,5 +27,12 @@
   "bugs": {
     "url": "https://github.com/magcho/tokyo-night-miku-live/issues"
   },
-  "homepage": "https://github.com/magcho/tokyo-night-miku-live#readme"
+  "homepage": "https://github.com/magcho/tokyo-night-miku-live#readme",
+  "devDependencies": {
+    "browser-sync": "^2.23.7",
+    "local-web-server": "^2.5.2",
+    "node-sass": "^4.9.0",
+    "nodemon": "^1.17.3",
+    "pug-cli": "^1.0.0-alpha6"
+  }
 }
