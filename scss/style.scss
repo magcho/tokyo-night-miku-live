@@ -1,0 +1,176 @@
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  width: 100%;
+  background-color: black;
+}
+
+header {
+  width: 80%;
+  margin-left: 10%;
+  padding-left: 0;
+  margin-top: 0;
+  height: 70px;
+  background-color: rgb(167, 167, 167);
+
+  ul {
+    padding-left: 0;
+    list-style: none;
+
+    li {
+      float: left;
+      width: 16.66%;
+      margin: auto;
+      border-right: solid 1px black;
+      box-sizing: border-box;
+
+      a {
+        display: block;
+        line-height: 70px;
+        margin: auto;
+        color: black;
+        text-align: center;
+      }
+    }
+
+    li:last {
+      border: none;
+    }
+  }
+
+  .icons {}
+}
+
+.area {
+  margin-bottom: 2em;
+  float: none;
+  margin-top: 2em;
+  width: 80%;
+  margin-left: 10%;
+  background-color: rgb(71, 71, 71);
+
+  .s {
+    margin: 2em;
+    padding: 1em 0;
+
+    h1 {
+      margin-top: initial;
+      font-size: 3em;
+    }
+  }
+
+  #logo {
+    height: 300px;
+    background-color: grey;
+  }
+
+  p.title {
+    font-size: 2em;
+  }
+
+  p.text {
+    font-size: 1em;
+  }
+
+  #about {
+    .youtube-field {
+      position: relative;
+      width: 100%;
+      padding-top: 56.25%;
+      margin-bottom: 3em;
+
+      iframe {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .text {
+      width: 70%;
+      float: left;
+      margin: 0;
+      p{
+        margin-top: 16px;
+        padding-left: 40px;
+      }
+    }
+
+    .actor {
+      padding-left: 5%;
+      width: 20%;
+      float: left;
+
+      h2{
+        margin-bottom: 0px;
+        padding-bottom: 0px;
+      }
+      ul{
+        margin-top: 16px;
+        padding-left: 40px;
+        li {
+          list-style: none;
+        }
+      }
+    }
+
+    :after {
+      content: "";
+      clear: both;
+      display: block;
+    }
+  }
+
+  #news {
+    table{
+      width: 100%;
+
+      tbody{
+        position: relative;
+        // :last-child{
+        //   border-bottom: none;
+        // }
+        tr{
+          // padding-left: 20px;
+          width: 100%;
+          display: block;
+          box-sizing: border-box;
+          height: 2em;
+          line-height: 2em;
+          border-bottom: solid 1px grey;
+          td{
+            padding:0px 20px;
+          }
+        }
+      }
+    }
+  }
+
+  #access {
+    .map-field {
+      position: relative;
+      width: 100%;
+      padding-top: 56.25%;
+
+      iframe {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  #gallery{
+    p{
+      padding-left: 40px;
+    }
+  }
+}

@@ -1,0 +1,113 @@
+html {
+  margin: 0;
+  padding: 0; }
+
+body {
+  margin: 0;
+  width: 100%;
+  background-color: black; }
+
+header {
+  width: 80%;
+  margin-left: 10%;
+  padding-left: 0;
+  margin-top: 0;
+  height: 70px;
+  background-color: #a7a7a7; }
+  header ul {
+    padding-left: 0;
+    list-style: none; }
+    header ul li {
+      float: left;
+      width: 16.66%;
+      margin: auto;
+      border-right: solid 1px black;
+      box-sizing: border-box; }
+      header ul li a {
+        display: block;
+        line-height: 70px;
+        margin: auto;
+        color: black;
+        text-align: center; }
+    header ul li:last {
+      border: none; }
+
+.area {
+  margin-bottom: 2em;
+  float: none;
+  margin-top: 2em;
+  width: 80%;
+  margin-left: 10%;
+  background-color: #474747; }
+  .area .s {
+    margin: 2em;
+    padding: 1em 0; }
+    .area .s h1 {
+      margin-top: initial;
+      font-size: 3em; }
+  .area #logo {
+    height: 300px;
+    background-color: grey; }
+  .area p.title {
+    font-size: 2em; }
+  .area p.text {
+    font-size: 1em; }
+  .area #about .youtube-field {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+    margin-bottom: 3em; }
+    .area #about .youtube-field iframe {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%; }
+  .area #about .text {
+    width: 70%;
+    float: left;
+    margin: 0; }
+    .area #about .text p {
+      margin-top: 16px;
+      padding-left: 40px; }
+  .area #about .actor {
+    padding-left: 5%;
+    width: 20%;
+    float: left; }
+    .area #about .actor h2 {
+      margin-bottom: 0px;
+      padding-bottom: 0px; }
+    .area #about .actor ul {
+      margin-top: 16px;
+      padding-left: 40px; }
+      .area #about .actor ul li {
+        list-style: none; }
+  .area #about :after {
+    content: "";
+    clear: both;
+    display: block; }
+  .area #news table {
+    width: 100%; }
+    .area #news table tbody {
+      position: relative; }
+      .area #news table tbody tr {
+        width: 100%;
+        display: block;
+        box-sizing: border-box;
+        height: 2em;
+        line-height: 2em;
+        border-bottom: solid 1px grey; }
+        .area #news table tbody tr td {
+          padding: 0px 20px; }
+  .area #access .map-field {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%; }
+    .area #access .map-field iframe {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%; }
+  .area #gallery p {
+    padding-left: 40px; }

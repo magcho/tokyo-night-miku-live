@@ -1,0 +1,33 @@
+doctype
+html(lang='ja')
+  head
+    meta(charset='utf-8')
+    style(src='css/style.css')
+    title Hello, Pug world!
+
+  body
+    // HTMLに残るコメント
+    //- HTMLに残らないコメント
+
+    div.theme__yellow#wrapper
+      h1.title Hello, Pug world!
+
+      div.content
+        h2 コンテンツタイトル
+        p.text
+          a.link(href='#') リンク
+        p.image: img(
+          src='http://placehold.jp/200x200.png'
+          alt=''
+        )
+        p.text
+          |本文テキスト
+          br
+          |本文テキスト
+          script(a=adg)
+          div.content
+            div.row
+              div.col-1
+                h1 こんにちは
+
+    script(src='js/app.js')
