@@ -1,3 +1,4 @@
+@import './responsive.scss';
 html {
   margin: 0;
   padding: 0;
@@ -10,12 +11,17 @@ body {
 }
 
 header {
-  width: 80%;
-  margin-left: 10%;
   padding-left: 0;
   margin-top: 0;
   height: 70px;
   background-color: rgb(167, 167, 167);
+  @include mq(pc){
+    width: 80%;
+    margin-left: 10%;
+  };
+  @include mq(sm){
+    width: 100%;
+  };
 
   ul {
     padding-left: 0;
@@ -29,6 +35,10 @@ header {
       box-sizing: border-box;
 
       a {
+        text-decoration: none;
+        font-family: 'Poiret One', cursive;
+        font-size: 2em;
+        font-weight: lighter;
         display: block;
         line-height: 70px;
         margin: auto;
@@ -38,7 +48,7 @@ header {
     }
 
     li:last {
-      border: none;
+      border-right: none;
     }
   }
 
@@ -49,15 +59,23 @@ header {
   margin-bottom: 2em;
   float: none;
   margin-top: 2em;
-  width: 80%;
-  margin-left: 10%;
   background-color: rgb(71, 71, 71);
+  @include mq(pc){
+    width: 80%;
+    margin-left: 10%;
+  };
+  @include mq(sm){
+    width: 100%;
+    margin-left: 0px;
+  }
 
   .s {
     margin: 2em;
     padding: 1em 0;
 
     h1 {
+      // font-family: 'Josefin Sans', sans-serif;
+      font-family: 'Poiret One', cursive;
       margin-top: initial;
       font-size: 3em;
     }
@@ -91,7 +109,10 @@ header {
         height: 100%;
       }
     }
-
+    h2{
+      // font-family: 'Josefin Sans', sans-serif;
+      font-family: 'Poiret One', cursive;
+    }
     .text {
       width: 70%;
       float: left;
@@ -146,9 +167,30 @@ header {
           border-bottom: solid 1px grey;
           td{
             padding:0px 20px;
+            display: none;
+            float: left;
           }
+          td.sm{
+            @include mq(sm){
+              display: block;
+            };
+          }
+          td.pc{
+            @include mq(pc){
+              display: block;
+            };
+          }
+          td.title{
+            display: block;
+          }
+
         }
       }
+    }
+    :after {
+      content: "";
+      clear: both;
+      display: block;
     }
   }
 
