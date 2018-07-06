@@ -28,6 +28,8 @@ header {
       margin: auto;
       border-right: solid 1px black;
       box-sizing: border-box; }
+      header ul li :hover {
+        background-color: #797979; }
       header ul li a {
         text-decoration: none;
         font-family: 'Poiret One', cursive;
@@ -53,7 +55,7 @@ header {
   @media screen and (max-width: 768px) {
     .area {
       width: 100%;
-      margin-left: 0px; } }
+      margin-left: 0; } }
   .area .s {
     margin: 2em;
     padding: 1em 0; }
@@ -93,8 +95,8 @@ header {
     width: 20%;
     float: left; }
     .area #about .actor h2 {
-      margin-bottom: 0px;
-      padding-bottom: 0px; }
+      margin-bottom: 0;
+      padding-bottom: 0; }
     .area #about .actor ul {
       margin-top: 16px;
       padding-left: 40px; }
@@ -116,7 +118,7 @@ header {
         line-height: 2em;
         border-bottom: solid 1px grey; }
         .area #news table tbody tr td {
-          padding: 0px 20px;
+          padding: 0 20px;
           display: none;
           float: left; }
         @media screen and (max-width: 768px) {
@@ -143,3 +145,41 @@ header {
       height: 100%; }
   .area #gallery p {
     padding-left: 40px; }
+  .area #links #twitter {
+    overflow: scroll; }
+    @media screen and (max-width: 768px) {
+      .area #links #twitter {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0; } }
+    @media screen and (min-width: 769px) {
+      .area #links #twitter {
+        width: 50%; } }
+    .area #links #twitter .twitter-timeline {
+      max-height: 600px; }
+  @media screen and (max-width: 768px) {
+    .area #links #youtube {
+      width: 100%;
+      margin-left: 0;
+      margin-right: 0; } }
+  @media screen and (min-width: 769px) {
+    .area #links #youtube {
+      width: 50%;
+      height: auto; } }
+  .area #links .item {
+    float: left; }
+  .area #links :after {
+    content: "";
+    clear: both;
+    display: block; }
+
+footer {
+  background-color: #222222;
+  margin-bottom: 0;
+  padding-top: 1em;
+  padding-bottom: 1em; }
+  footer p {
+    margin-bottom: 0;
+    text-align: center; }
+    footer p a {
+      color: #000945; }

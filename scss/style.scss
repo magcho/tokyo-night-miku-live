@@ -1,4 +1,5 @@
 @import './responsive.scss';
+
 html {
   margin: 0;
   padding: 0;
@@ -15,11 +16,11 @@ header {
   margin-top: 0;
   height: 70px;
   background-color: rgb(167, 167, 167);
-  @include mq(pc){
+  @include mq(pc) {
     width: 80%;
     margin-left: 10%;
   };
-  @include mq(sm){
+  @include mq(sm) {
     width: 100%;
   };
 
@@ -33,6 +34,10 @@ header {
       margin: auto;
       border-right: solid 1px black;
       box-sizing: border-box;
+
+      :hover {
+        background-color: #797979;
+      }
 
       a {
         text-decoration: none;
@@ -60,13 +65,13 @@ header {
   float: none;
   margin-top: 2em;
   background-color: rgb(71, 71, 71);
-  @include mq(pc){
+  @include mq(pc) {
     width: 80%;
     margin-left: 10%;
   };
-  @include mq(sm){
+  @include mq(sm) {
     width: 100%;
-    margin-left: 0px;
+    margin-left: 0;
   }
 
   .s {
@@ -109,15 +114,18 @@ header {
         height: 100%;
       }
     }
-    h2{
+
+    h2 {
       // font-family: 'Josefin Sans', sans-serif;
       font-family: 'Poiret One', cursive;
     }
+
     .text {
       width: 70%;
       float: left;
       margin: 0;
-      p{
+
+      p {
         margin-top: 16px;
         padding-left: 40px;
       }
@@ -128,13 +136,15 @@ header {
       width: 20%;
       float: left;
 
-      h2{
-        margin-bottom: 0px;
-        padding-bottom: 0px;
+      h2 {
+        margin-bottom: 0;
+        padding-bottom: 0;
       }
-      ul{
+
+      ul {
         margin-top: 16px;
         padding-left: 40px;
+
         li {
           list-style: none;
         }
@@ -149,15 +159,15 @@ header {
   }
 
   #news {
-    table{
+    table {
       width: 100%;
 
-      tbody{
+      tbody {
         position: relative;
         // :last-child{
         //   border-bottom: none;
         // }
-        tr{
+        tr {
           // padding-left: 20px;
           width: 100%;
           display: block;
@@ -165,28 +175,32 @@ header {
           height: 2em;
           line-height: 2em;
           border-bottom: solid 1px grey;
-          td{
-            padding:0px 20px;
+
+          td {
+            padding: 0 20px;
             display: none;
             float: left;
           }
-          td.sm{
-            @include mq(sm){
+
+          td.sm {
+            @include mq(sm) {
               display: block;
             };
-          }
-          td.pc{
-            @include mq(pc){
-              display: block;
-            };
-          }
-          td.title{
-            display: block;
           }
 
+          td.pc {
+            @include mq(pc) {
+              display: block;
+            };
+          }
+
+          td.title {
+            display: block;
+          }
         }
       }
     }
+
     :after {
       content: "";
       clear: both;
@@ -210,9 +224,66 @@ header {
     }
   }
 
-  #gallery{
-    p{
+  #gallery {
+    p {
       padding-left: 40px;
     }
+  }
+
+  #links {
+    #twitter {
+      @include mq(sm) {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+      }
+      @include mq(pc) {
+        width: 50%;
+        // margin-left: 5%;
+        // margin-right: 5%;
+      }
+      .twitter-timeline {
+        max-height: 600px;
+      }
+      overflow: scroll;
+    }
+    #youtube{
+      @include mq(sm) {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+      }
+      @include mq(pc) {
+        width: 50%;
+        // margin-left: 5%;
+        // margin-right: 5%;
+        height: auto;
+      }
+    }
+
+    .item {
+      float: left;
+    }
+
+    :after {
+      content: "";
+      clear: both;
+      display: block;
+    }
+  }
+}
+
+footer {
+  background-color: rgb(34, 34, 34);
+  margin-bottom: 0;
+  padding-top: 1em;
+  padding-bottom: 1em;
+
+  p {
+    a {
+      color: rgb(0, 9, 69);
+    }
+    margin-bottom: 0;
+    text-align: center;
   }
 }
