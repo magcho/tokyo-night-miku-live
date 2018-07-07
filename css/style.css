@@ -1,47 +1,58 @@
+@charset "UTF-8";
 html {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', '游ゴシック Medium', meiryo, sans-serif; }
 
 body {
   margin: 0;
+  padding: 0;
   width: 100%;
   background-color: black; }
 
-header {
-  padding-left: 0;
-  margin-top: 0;
-  height: 70px;
-  background-color: #a7a7a7; }
-  @media screen and (min-width: 769px) {
-    header {
-      width: 80%;
-      margin-left: 10%; } }
-  @media screen and (max-width: 768px) {
-    header {
-      width: 100%; } }
-  header ul {
+@media screen and (min-width: 769px) {
+  header {
+    width: 80%;
+    margin-left: 10%;
     padding-left: 0;
-    list-style: none; }
-    header ul li {
-      float: left;
-      width: 16.66%;
+    margin-top: 0;
+    height: 70px;
+    background-color: #a7a7a7; }
+    header #sm-menu {
+      display: none; } }
+
+@media screen and (max-width: 768px) {
+  header {
+    width: 100%; }
+    header #pc-menu {
+      display: none; } }
+
+header ul {
+  padding-left: 0;
+  list-style: none; }
+  header ul :last-child {
+    border: none; }
+  header ul li {
+    float: left;
+    width: 16.66%;
+    margin: auto;
+    border-right: solid 1px black;
+    box-sizing: border-box;
+    transition: all 1s  ease; }
+    header ul li :hover {
+      background-color: #797979; }
+    header ul li a {
+      text-decoration: none;
+      font-family: 'Poiret One', cursive;
+      font-size: 2em;
+      font-weight: lighter;
+      display: block;
+      line-height: 70px;
       margin: auto;
-      border-right: solid 1px black;
-      box-sizing: border-box; }
-      header ul li :hover {
-        background-color: #797979; }
-      header ul li a {
-        text-decoration: none;
-        font-family: 'Poiret One', cursive;
-        font-size: 2em;
-        font-weight: lighter;
-        display: block;
-        line-height: 70px;
-        margin: auto;
-        color: black;
-        text-align: center; }
-    header ul li:last {
-      border-right: none; }
+      color: black;
+      text-align: center; }
+  header ul li:last {
+    border-right: none; }
 
 .area {
   margin-bottom: 2em;
@@ -56,13 +67,19 @@ header {
     .area {
       width: 100%;
       margin-left: 0; } }
-  .area .s {
-    margin: 2em;
-    padding: 1em 0; }
-    .area .s h1 {
-      font-family: 'Poiret One', cursive;
-      margin-top: initial;
-      font-size: 3em; }
+  @media screen and (min-width: 769px) {
+    .area .s {
+      margin: 2em;
+      padding: 1em 0; } }
+  @media screen and (max-width: 768px) {
+    .area .s {
+      margin: 1em;
+      padding: inherit inherit 2em;
+      padding-bottom: 0.5em; } }
+  .area .s h1 {
+    font-family: 'Poiret One', cursive;
+    margin-top: initial;
+    font-size: 3em; }
   .area #logo {
     height: 300px;
     background-color: grey; }
@@ -74,7 +91,7 @@ header {
     position: relative;
     width: 100%;
     padding-top: 56.25%;
-    margin-bottom: 3em; }
+    margin-bottom: 1em; }
     .area #about .youtube-field iframe {
       position: absolute;
       top: 0;
@@ -83,25 +100,36 @@ header {
       height: 100%; }
   .area #about h2 {
     font-family: 'Poiret One', cursive; }
-  .area #about .text {
-    width: 70%;
-    float: left;
-    margin: 0; }
-    .area #about .text p {
-      margin-top: 16px;
-      padding-left: 40px; }
-  .area #about .actor {
-    padding-left: 5%;
-    width: 20%;
-    float: left; }
-    .area #about .actor h2 {
-      margin-bottom: 0;
-      padding-bottom: 0; }
+  @media screen and (min-width: 769px) {
+    .area #about .text {
+      width: 70%;
+      float: left;
+      margin: 0; }
+      .area #about .text p {
+        margin-top: 16px;
+        padding-left: 40px;
+        text-align: center; } }
+  @media screen and (min-width: 769px) {
+    .area #about .actor {
+      padding-left: 5%;
+      width: 20%;
+      float: left; }
+      .area #about .actor h2 {
+        margin-bottom: 0;
+        padding-bottom: 0; }
+      .area #about .actor ul {
+        margin-top: 16px;
+        padding-left: 40px; }
+        .area #about .actor ul li {
+          list-style: none; } }
+  @media screen and (max-width: 768px) {
     .area #about .actor ul {
       margin-top: 16px;
-      padding-left: 40px; }
+      padding-left: 0; }
       .area #about .actor ul li {
-        list-style: none; }
+        list-style: none;
+        float: left;
+        margin-right: 1em; } }
   .area #about :after {
     content: "";
     clear: both;
@@ -154,7 +182,9 @@ header {
         margin-right: 0; } }
     @media screen and (min-width: 769px) {
       .area #links #twitter {
-        width: 50%; } }
+        width: 35%;
+        box-sizing: border-box;
+        border-right: 1em rgba(0, 0, 0, 0) solid; } }
     .area #links #twitter .twitter-timeline {
       max-height: 600px; }
   @media screen and (max-width: 768px) {
@@ -164,8 +194,19 @@ header {
       margin-right: 0; } }
   @media screen and (min-width: 769px) {
     .area #links #youtube {
-      width: 50%;
+      width: 65%;
       height: auto; } }
+  .area #links #youtube .youtube-field {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+    margin-bottom: 1em; }
+    .area #links #youtube .youtube-field iframe {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%; }
   .area #links .item {
     float: left; }
   .area #links :after {
@@ -183,3 +224,6 @@ footer {
     text-align: center; }
     footer p a {
       color: #000945; }
+
+.s img {
+  width: 100%; }
