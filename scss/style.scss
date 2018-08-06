@@ -70,7 +70,11 @@ header {
     }
   }
 }
-
+#logo{
+  img{
+    width: 100%
+  }
+}
 .area {
   margin-bottom: 2em;
   float: none;
@@ -102,11 +106,6 @@ header {
       margin-top: initial;
       font-size: 3em;
     }
-  }
-
-  #logo {
-    height: 300px;
-    background-color: grey;
   }
 
   p.title {
