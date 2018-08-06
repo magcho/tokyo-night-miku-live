@@ -54,6 +54,9 @@ header ul {
   header ul li:last {
     border-right: none; }
 
+#logo img {
+  width: 100%; }
+
 .area {
   margin-bottom: 2em;
   float: none;
@@ -80,9 +83,6 @@ header ul {
     font-family: 'Poiret One', cursive;
     margin-top: initial;
     font-size: 3em; }
-  .area #logo {
-    height: 300px;
-    background-color: grey; }
   .area p.title {
     font-size: 2em; }
   .area p.text {
