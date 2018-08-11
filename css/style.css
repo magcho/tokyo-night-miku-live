@@ -23,9 +23,8 @@ body {
 
 @media screen and (max-width: 768px) {
   header {
-    width: 100%; }
-    header #pc-menu {
-      display: none; } }
+    display: none;
+    height: 0px; } }
 
 header ul {
   padding-left: 0;
@@ -54,8 +53,18 @@ header ul {
   header ul li:last {
     border-right: none; }
 
-#logo img {
-  width: 100%; }
+#logo {
+  display: none; }
+  #logo img {
+    width: 100%; }
+
+@media screen and (min-width: 769px) {
+  #logo.pc {
+    display: block; } }
+
+@media screen and (max-width: 768px) {
+  #logo.sm {
+    display: block; } }
 
 .area {
   margin-bottom: 2em;
@@ -213,6 +222,10 @@ header ul {
     content: "";
     clear: both;
     display: block; }
+
+@media screen and (max-width: 768px) {
+  .area.first {
+    margin-top: 0px; } }
 
 footer {
   background-color: #222222;
