@@ -26,10 +26,8 @@ header {
     background-color: rgb(167, 167, 167);
   };
   @include mq(sm) {
-    #pc-menu {
-      display: none;
-    }
-    width: 100%;
+    display: none;
+    height: 0px
   };
 
   ul {
@@ -71,8 +69,19 @@ header {
   }
 }
 #logo{
+  display: none;
   img{
     width: 100%
+  }
+}
+#logo.pc{
+  @include mq(pc){
+    display: block;
+  }
+}
+#logo.sm{
+  @include mq(sm){
+    display: block;
   }
 }
 .area {
@@ -323,6 +332,11 @@ header {
       clear: both;
       display: block;
     }
+  }
+}
+.area.first{
+  @include mq(sm){
+    margin-top: 0px;
   }
 }
 
