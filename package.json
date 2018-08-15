@@ -11,9 +11,9 @@
     "watch": "npm run serve & npm run watch:sass & npm run watch:pug",
     "watch:sass": "nodemon -e scss -x \"npm run build:sass\"",
     "watch:pug": "nodemon -e pug -x \"npm run build:pug\"",
-    "release": "",
-    "release:cass": "",
-    "release:pug": "pug *.pug",
+    "release": "npm run release:sass & npm run release:pug",
+    "release:sass": "node-sass --include-path scss scss/style.scss css/style.css --output-style compressed",
+    "release:pug": "pug ./pug -o ./",
     "ws": "ws",
     "pug": "pug",
     "sass": "node-sass"
