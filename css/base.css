@@ -1,0 +1,45 @@
+body {
+  background: #6d6a68;
+  margin: 0;
+}
+header {
+  background: #000;
+  width: 70%;
+  margin: 0 auto;
+  position: relative;
+}
+header:after {
+  content: "";
+}
+header #logo1,
+header #logo2 {
+  transition-duration: 800ms;
+  transition-timing-function: ease;
+  position: absolute;
+  width: 100%;
+  margin: auto 0;
+}
+header #logo1 {
+  z-index: 10;
+  opacity: 1;
+}
+header #logo1 #animation-svg {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+header #logo2 {
+  z-index: 0;
+  opacity: 0;
+  height: 100%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+header #logo2 img {
+  display: block;
+  width: 100%;
+  height: auto;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
