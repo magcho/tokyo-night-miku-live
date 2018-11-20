@@ -2,8 +2,13 @@ body {
   background: #6d6a68;
   margin: 0;
 }
-header {
+.container {
+  height: 100%;
+  width: 70%;
+  margin: 0 auto;
   background: #000;
+}
+header {
   width: 70%;
   margin: 0 auto;
   position: relative;
