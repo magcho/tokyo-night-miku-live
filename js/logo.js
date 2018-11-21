@@ -1,11 +1,11 @@
 
-const debug  = true
+const debug  = false
 
 const callback = () =>{
   document.getElementById('logo2').style.opacity = 1
   document.getElementById('logo1').style.opacity = 0
   headerHegiht();
-  // document.getElementById('blind-cover').style.opacity = 0
+  document.getElementById('blind-cover').style.opacity = 0
 }
 const headerHegiht = () =>{
   document.getElementsByTagName('header')[0].style.height = document.getElementById('logo1').clientHeight;
