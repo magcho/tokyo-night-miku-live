@@ -1,50 +1,75 @@
+/* for modern brouser */
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  height: 0;
+  visibility: hidden;
+}
+/* IE7,MacIE5 */
+.clearfix {
+  display: inline-block;
+}
+/* WinIE6 below, Exclude MacIE5 \*/
+* html .clearfix {
+  height: 1%;
+}
+.clearfix {
+  display: block;
+}
+/**/
 body {
   background: #6d6a68;
   margin: 0;
 }
 .container {
-  height: 100%;
   width: 70%;
   margin: 0 auto;
   background: #000;
 }
-header {
-  width: 70%;
+.container header {
   margin: 0 auto;
   position: relative;
+  height: 100%;
 }
-header:after {
+.container header:before {
+  padding: 100%;
+}
+.container header:after {
   content: "";
 }
-header #logo1,
-header #logo2 {
+.container header #logo1,
+.container header #logo2 {
   transition-duration: 800ms;
   transition-timing-function: ease;
   position: absolute;
   width: 100%;
   margin: auto 0;
 }
-header #logo1 {
+.container header #logo1 {
   z-index: 10;
   opacity: 1;
 }
-header #logo1 #animation-svg {
+.container header #logo1 #animation-svg {
   position: relative;
   width: 100%;
   height: auto;
 }
-header #logo2 {
+.container header #logo2 {
   z-index: 0;
   opacity: 0;
   height: 100%;
   position: absolute;
   left: 50%;
-  top: 50%;
 }
-header #logo2 img {
+.container header #logo2 img {
   display: block;
   width: 100%;
   height: auto;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
+}
+.container .area {
+  background: #fff;
+  position: absolute;
 }
