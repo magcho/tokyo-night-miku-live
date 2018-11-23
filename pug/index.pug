@@ -11,7 +11,6 @@ html
   body
     div#first-view
       header
-        debug
         div#blind-cover
         div#logo1
           #svg-anime
@@ -20,7 +19,9 @@ html
     .container
       .area#event
         .right
-          h2 Tokyo NIGHT Mikulive.
+          #livetitle
+            h2.pc Tokyo NIGHT Mikulive.
+            h2.sm Event
           img(src='./img/poster-min.png')
           h3.description ボカロ×バンドサウンドの新感覚ライブを<br>あなたも体験してみませんか？
           ul
@@ -33,13 +34,14 @@ html
       .area#act
         .right
           #vocal
-            h2 Vocal
-            h3 初音ミク
-            h3 鏡音リン
-            h3 鏡音レン
+            h2.act-section Vocal
+            .vocaloid
+              h3 初音ミク
+              h3 鏡音リン
+              h3 鏡音レン
           
           #band-member
-            h2 BandMember
+            h2.act-section BandMember
             .member-info
               .l
                 img(src='./img/icon/dr.jpg')
@@ -60,6 +62,9 @@ html
                     li <a href='https://twitter.com/shione_drum'>Twitter</a>
             
             .member-info
+              .l.sm
+                img(src='./img/icon/gt.jpg')
+                h3 kurara
               .r
                 p 弾ける楽器: エレキギター
                 p 血液型: A型
@@ -70,7 +75,7 @@ html
                     li <a href='https://twitter.com/shione_drum'>Twitter</a>
                     li <a href='https://www.youtube.com/channel/UCmL1geYKHekURW9xT_n_eXQ'>Youtube</a>
                     li <a href='https://com.nicovideo.jp/community/co1611483'>niconico</a>
-              .l
+              .l.pc
                 img(src='./img/icon/gt.jpg')
                 h3 kurara
                 
@@ -94,6 +99,9 @@ html
                     li <a href='https://takaton-alive.wixsite.com/takatone'>HP</a>
 
             .member-info
+              .l.sm
+                img(src='./img/icon/ba.jpg')
+                h3 奥貫圭一朗
               .r
                 p 弾ける楽器: 
                   ul
@@ -106,7 +114,7 @@ html
                 p Links: 
                   ul
                     li <a href='https://twitter.com/kinoko8812'>Twitter</a>
-              .l  
+              .l.pc
                 img(src='./img/icon/ba.jpg')
                 h3 奥貫圭一朗
 

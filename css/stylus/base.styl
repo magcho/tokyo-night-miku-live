@@ -1,6 +1,7 @@
 // mixins
 $debug = false
 @import url('https://fonts.googleapis.com/css?family=Iceland');
+@import "./_media_query"
 /**
  * animation-setting(delay)
  * @param {int} delayの秒数(ms)していなしで0ms
@@ -9,6 +10,13 @@ if debug
   $logoFadeTime = 1ms
 else
   $logoFadeTime = 800ms
++mq(sm)
+  .pc
+    display: none;
++mq(pc)
+  .sm
+    display: none;
+
 
 body
   // background: white
@@ -83,8 +91,11 @@ body
   font-weight: lighter;
   width: 100%
   // height: 100%
-  padding: 2em
-  padding: 10em
+  +mq(pc)
+    padding: 10em
+  +mq(sm)
+    padding: 3em 0
+    margin-bottom: 5em
   // margin: 0 auto
   // background-color: rgba(212, 212, 212, 1);
   position: relative;
@@ -96,22 +107,42 @@ body
   background-size:contain;
   background-repeat: no-repeat;
 
-  .right
-    box-sizing: border-box
-    width: 50%
-    margin-left: 50%
-
+  +mq(pc)
+    .right
+      box-sizing: border-box
+      width: 50%
+      margin-left: 50%
+  +mq(sm)
+    .right
+      width: 100%
 #event
-  background-image: url('../img/back/back-event-ink.svg')
+
+  +mq(pc)
+    background-image: url('../img/back/back-event-ink.svg')
   color: white
   img
     margin-top: 2em
     display: block;
     width: 100%
-  h2
+  #livetitle
     font-family: 'Iceland', cursive;
-    font-size: 3em
-    margin: 0 auto
+    +mq(pc)
+      h2
+        margin: 0 auto
+        font-size: 3em
+    +mq(sm)
+      h2
+        text-align: center;
+        // text-decoration: underline;
+        border-bottom: double 6px white;
+        width: fit-content
+        text-rendering: geometricPrecision
+        font-size: 5em
+        margin: 0 auto;
+        padding: 0
+
+
+
 
   .description
     text-align: center;
@@ -138,26 +169,47 @@ body
       width: 100%;
       height: 100%;
 #act
-  background-image: url('../img/back/back-act-ink.svg')
+  +mq(pc)
+    background-image: url('../img/back/back-act-ink.svg')
   color: white
+  .act-section
+    +mq(pc)
+      font-family: 'Iceland', cursive;
+      font-size: 4em
+      margin: 0 auto
+    +mq(sm)
+      font-family: 'Iceland', cursive;
+      font-size: 3em
+      // text-decoration: underline;
+      border-bottom: double 5px white;
+      width: fit-content
+      margin: 0 auto
+      margin-bottom: 1em
+
+  +mq(sm)
+    .sm
+      position: relative;
+      float: none;
+      display: block;
+      width: 100%
   #vocal
     margin-bottom: 5em
-    h2
-      font-family: 'Iceland', cursive;
-      font-size: 4em
-      margin: 0 auto
-    h3
-      padding-left: 2em
-      margin-bottom: 0;
-      margin-top: 0.5em
-      display: inline
+
+    .vocaloid
+      width: fit-content
+      margin: 0 auto;
+      h3
+        margin-left: 2em
+        margin: 0 auto;
+        margin-bottom: 0;
+        margin-top: 0.5em
+        margin-right: 1em
+        display: inline
+        border-bottom: dotted 3px white;
+        width: fit-content
+
 
   #band-member
-    h2
-      margin-bottom: 1em
-      font-family: 'Iceland', cursive;
-      font-size: 4em
-      margin: 0 auto
     .member-info
       margin-top: 1em
       margin-bottom: 2em
@@ -168,28 +220,40 @@ body
         float: left;
 
       a
-        color: rgb(21, 108, 154);
+        color: rgb(226, 245, 255);
+        text-decoration: underline;
         &:hover
-          color:rgb(16, 88, 126)
+          color:rgb(151, 199, 224)
       h3
         text-align: center;
         font-size: 2em
         margin: 0
+        font-weight: lighter;
+        border-bottom: dotted 3px white;
+        width: fit-content
+        margin: 0 auto
+      ul
+        list-style:none;
+        +mq(sm)
+          padding-left: 1em
+        li
+          word-break: keep-all;
+          display: inline;
+          +mq(pc)
+            margin-right: 1em
       img
         width: 70%
         margin: 0 auto;
         border-radius: 100%
+
+        +mq(pc)
+          display: block;
+    .l
+      img
         display: block;
 
-      ul
-        list-style:none;
-        li
-          word-break: keep-all;
-          display: inline;
-          margin-right: 1em
-// #about
-  // background-image: url('../img/back/back-about-ink.svg')
-  // color: white;
+
+
 
 footer
   font-family: arial, sans-serif;

@@ -52,8 +52,9 @@ gulp.task("server", function(){
 gulp.task('watch',() => {
   gulp.watch('./pug/*.pug', ['pug']);
   gulp.watch('./css/stylus/*.styl', ['stylus']);
-  gulp.watch(['./*.*','./css/*.*','./js/*.*'], ['browserSync']);
-  gulp.watch('./img/*')
+  gulp.watch(['./public/**/*'], ['browserSync']);
+  gulp.watch('./img/*',['img-copy']);
+  gulp.watch('./js/**/*',['js'])
 });
 gulp.task('build', [
   'pug',
