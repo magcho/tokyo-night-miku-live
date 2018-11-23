@@ -13,14 +13,22 @@ gulp.task('pug', () => {
     .pipe(pug({
       pretty: true
     }))
-    .pipe(gulp.dest('./'));
+    .pipe(gulp.dest('./public/'));
 });
 gulp.task('stylus',()=>{
   gulp.src(['./css/stylus/*.styl', '!./css/stylus/_*.styl'])
   .pipe(plumber())
   .pipe(stylus())
   .pipe(autoprefixer())
-  .pipe(gulp.dest('./css/'))
+  .pipe(gulp.dest('./public/css/'))
+})
+gulp.task('img-copy', ()=>{
+  gulp.src('./img/**/*')
+  .pipe(gulp.dest('./public/img/'))
+})
+gulp.task('js', ()=>{
+  gulp.src('./js/**/*')
+  .pipe(gulp.dest('./public/js/'))
 })
 
 
@@ -30,7 +38,7 @@ gulp.task('browserSync', () => {
 gulp.task("server", function(){
   browserSync({
     server: {
-      baseDir: './',
+      baseDir: './public/',
       // directory: true //ディレクトリを表示
     },
     open: "external"　//IPアドレスで発行
@@ -45,6 +53,7 @@ gulp.task('watch',() => {
   gulp.watch('./pug/*.pug', ['pug']);
   gulp.watch('./css/stylus/*.styl', ['stylus']);
   gulp.watch(['./*.*','./css/*.*','./js/*.*'], ['browserSync']);
+  gulp.watch('./img/*')
 });
 gulp.task('default',[
   'watch',

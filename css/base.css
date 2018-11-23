@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Iceland");
+@import "./_media_query.styl";
 /**
  * animation-setting(delay)
  * @param {int} delayの秒数(ms)していなしで0ms
