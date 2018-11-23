@@ -9,6 +9,9 @@ const callback = () =>{
   if(!debug){
     document.getElementById('blind-cover').style.opacity = 0
   }
+  setTimeout(function () {
+    document.getElementById('blind-cover').parentNode.removeChild(document.getElementById('blind-cover'));
+  }, 1000);
 }
 const headerHegiht = () =>{
   document.getElementsByTagName('header')[0].style.height = document.getElementById('logo1').clientHeight;

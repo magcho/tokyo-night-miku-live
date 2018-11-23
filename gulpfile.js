@@ -57,10 +57,10 @@ gulp.task('watch',() => {
   gulp.watch('./js/**/*',['js'])
 });
 gulp.task('build', [
-  'pug',
-  'stylus',
+  'pug-min',
+  'stylus-min',
   'img-copy',
-  'js'
+  'js-min'
 ])
 gulp.task('default',[
   'watch',

@@ -157,6 +157,7 @@ body
     font-weight: lighter;
 
   .map-feild
+    margin-top: 2em
     position: relative;
     padding-bottom: 56.25%;
     padding-top: 30px;
@@ -168,6 +169,37 @@ body
       left: 0;
       width: 100%;
       height: 100%;
+  .youtube
+    h2
+      +mq(pc)
+        font-family: 'Iceland', cursive;
+        font-size: 4em
+        margin: 0 auto
+        border-bottom: double 5px white;
+        width: fit-content
+        margin: 0 auto
+        margin-bottom: 1em
+        margin-top: 2em;
+      +mq(sm)
+        font-family: 'Iceland', cursive;
+        font-size: 3em
+        // text-decoration: underline;
+        border-bottom: double 5px white;
+        width: fit-content
+        margin: 0 auto
+        margin-bottom: 1em
+        margin-top: 1em
+    .youtube-feild
+      margin-top: 1em
+      position:relative;
+      width:100%;
+      padding-top:56.25%;
+      iframe
+        position:absolute;
+        top:0;
+        right:0;
+        width:100%;
+        height:100%;
 #act
   +mq(pc)
     background-image: url('../img/back/back-act-ink.svg')
