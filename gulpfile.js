@@ -55,6 +55,12 @@ gulp.task('watch',() => {
   gulp.watch(['./*.*','./css/*.*','./js/*.*'], ['browserSync']);
   gulp.watch('./img/*')
 });
+gulp.task('build', [
+  'pug',
+  'stylus',
+  'img-copy',
+  'js'
+])
 gulp.task('default',[
   'watch',
   'server'
