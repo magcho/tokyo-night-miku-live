@@ -63,6 +63,10 @@ gulp.task('build', [
   'js-min'
 ])
 gulp.task('default',[
+  'pug',
+  'stylus',
+  'img-copy',
+  'js',
   'watch',
   'server'
 ]);
