@@ -3,6 +3,8 @@ var pug = require('gulp-pug');
 var autoprefixer = require('gulp-autoprefixer');
 var sourcemaps = require('gulp-sourcemaps');
 var stylus = require('gulp-stylus');
+var cleanCss = require('gulp-clean-css');
+var gulpMinify = require('gulp-minify');
 
 var browserSync = require('browser-sync');
 var plumber = require('gulp-plumber');
@@ -15,11 +17,27 @@ gulp.task('pug', () => {
     }))
     .pipe(gulp.dest('./public/'));
 });
+gulp.task('pug-min', () => {
+  gulp.src(['./pug/**/*.pug', '!./pug/**/_*.pug'])
+    .pipe(plumber())
+    .pipe(pug({
+      pretty: false
+    }))
+    .pipe(gulp.dest('./public/'));
+});
 gulp.task('stylus',()=>{
   gulp.src(['./css/stylus/*.styl', '!./css/stylus/_*.styl'])
   .pipe(plumber())
   .pipe(stylus())
   .pipe(autoprefixer())
+  .pipe(gulp.dest('./public/css/'))
+})
+gulp.task('stylus-min',()=>{
+  gulp.src(['./css/stylus/*.styl', '!./css/stylus/_*.styl'])
+  .pipe(plumber())
+  .pipe(stylus())
+  .pipe(autoprefixer())
+  .pipe(cleanCss({compatibility: 'ie9,-properties.merging'}))
   .pipe(gulp.dest('./public/css/'))
 })
 gulp.task('img-copy', ()=>{
@@ -28,6 +46,11 @@ gulp.task('img-copy', ()=>{
 })
 gulp.task('js', ()=>{
   gulp.src('./js/**/*')
+  .pipe(gulp.dest('./public/js/'))
+})
+gulp.task('js-min', ()=>{
+  gulp.src('./js/**/*.js')
+  .pipe(gulpMinify())
   .pipe(gulp.dest('./public/js/'))
 })
 
