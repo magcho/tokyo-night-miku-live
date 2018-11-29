@@ -14,21 +14,14 @@ const setAleady = (type, value) => {
   localStorage.setItem('aleady', true)
 }
 const makeImg = () =>{
-  html2canvas(document.querySelector("#palette"))
-    .then(shot(canvas))
+  html2canvas(document.querySelector("#palette")).then(canvas => {
+    var imgData = canvas.toDataURL();
+    document.getElementById("result").src = imgData;
+    console.log(1);
+  })
 }
 
 
 onload = function() {
   main()
-}
-let shot = (canvas) => {
-  return function(){
-    return new Promise(function(resolve) {
-      var imgData = canvas.toDataURL();
-      document.getElementById("result").src = imgData;
-      console.log(1);
-      resolve()
-    });
-  }
 }

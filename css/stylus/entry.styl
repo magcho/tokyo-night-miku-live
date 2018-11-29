@@ -107,6 +107,7 @@ body
       height: 100%
     +mq(sm)
       width: 100%
+      float: left;
     // padding-bottom: 1em
     margin: 0 auto;
     img
@@ -145,16 +146,21 @@ body
         font-family: fontello,Raleway
         font-weight: bold;
 .re
-  position: relative;
+  z-index: 10
   +mq(pc)
+    position: relative;
     top: -100%
-  height: 100%
+  　height: 100%
   +mq(sm)
-    top: -100%
+    display: inline-block;
+    float: left;
+    left: -100%
+    height: fit-content
   #result
     display: block;
     margin: 0 auto;
     +mq(pc)
       height: 100%
     +mq(sm)
+      position:  absolute;
       width: 100%
