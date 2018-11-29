@@ -20,7 +20,8 @@ html
         //-   li Open: 19:00, Start 19:30
         //-   li Ticket: ¥1,000-
       .form-field
-        form(class="cp_ipcheck" name="ticket" method="POST" action="./success.html" netlify)
+        //- form(class="cp_ipcheck" name="ticket" method="POST" action="./success.html" netlify)
+        form(class="cp_ipcheck" name="ticket" method="GET" action="./success.html" netlify)
           p.check
             label
               <input class="option-input02 checkbox" type="checkbox" name="attend" value="attend" onKeyUp="save()"/> チケットを取りおく(¥1,000-)
@@ -29,7 +30,7 @@ html
               input(type="text" id="twitter-value" name="twitter" placeholder="@TwitterID" onKeyUp="save()")
           p.or OR
           P.mail
-            label emailAddr
+            label Email Addr
               input(type="text" id="email-value" name="emailaddr" placeholder="abc@example.co.jp" onKeyUp="save()")
           p
             button(type="submit") 送信

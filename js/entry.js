@@ -11,3 +11,9 @@ let save = ()=>{
   localStorage.setItem('tnm-twitter-id',document.getElementById('twitter-value').value);
   localStorage.setItem('tnm-email-addr',document.getElementById('email-value').value);
 }
+
+onload = function(){
+  if(localStorage.getItem('aleady') == 'true'){
+    location.href='./success.html'
+  }
+}
