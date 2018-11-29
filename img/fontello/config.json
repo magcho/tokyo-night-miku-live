@@ -7,16 +7,34 @@
   "ascent": 850,
   "glyphs": [
     {
+      "uid": "937f4db8b6ff3348a1d9fcd5e12fd2fe",
+      "css": "mail",
+      "code": 59392,
+      "src": "iconic"
+    },
+    {
+      "uid": "906348dc798a0d42715cc97c875e3ac6",
+      "css": "twitter-squared",
+      "code": 62212,
+      "src": "fontawesome"
+    },
+    {
       "uid": "627abcdb627cb1789e009c08e2678ef9",
       "css": "twitter",
       "code": 61593,
       "src": "fontawesome"
     },
     {
-      "uid": "937f4db8b6ff3348a1d9fcd5e12fd2fe",
-      "css": "mail",
-      "code": 59392,
-      "src": "iconic"
+      "uid": "4743b088aa95d6f3b6b990e770d3b647",
+      "css": "facebook-squared",
+      "code": 62216,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "17c21cd98db80e521e573eba247bd69b",
+      "css": "mail-squared",
+      "code": 61849,
+      "src": "fontawesome"
     }
   ]
 }
