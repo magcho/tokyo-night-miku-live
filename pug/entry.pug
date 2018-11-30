@@ -7,7 +7,8 @@ html
     <meta name="twitter:site" content="@ToNIGHTMiku" />
     <meta name="twitter:title" content="Tokyo Night MikuLive公式HP" />
     <meta name="twitter:description" content="【ライブハウス×ミクライブ 】ファンメイドミクライブ、TokyoNIGHTMikuLive公式ツイッターです！"/>
-    <meta name="twitter:image" content="https://nightmiku.tokyo/img/icon.png" />
+    //- <meta name="twitter:image" content="https://nightmiku.tokyo/img/icon.png" />
+    <meta name="twitter:image" content="https://nightmiku.tokyo/img/mikucard.jpg" />
 
   body
     .container
@@ -16,13 +17,13 @@ html
       .live-field
         h3.center 【チケット取り置き手順】
         ul
-          li ① ↑のフォームにメールアドレスまたはtwitterIDを入力し送信！
+          li ① 下のフォームにメールアドレスまたはtwitterIDを入力し送信！
           li ② 出てきた画面をスクリーンショットして保存！
           li ③ 当日、会場でのチケット購入時にスクショ画面をスタッフにお見せください！
 
       .form-field
         //- form(class="cp_ipcheck" name="ticket" method="POST" action="./success.html" netlify)
-        form(class="cp_ipcheck" name="ticket" method="GET" action="./success.html" netlify)
+        form(class="cp_ipcheck" name="ticket" method="POST" action="./success.html" netlify)
           p.check
             label
               <input placeholder="✔" class="option-input02 checkbox" type="checkbox" name="attend" value="attend" onKeyUp="save()"/> チケットを取りおく(¥1,000-)
