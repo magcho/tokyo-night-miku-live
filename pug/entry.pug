@@ -14,17 +14,18 @@ html
       img(src="./img/logo_color.jpg")
       //- h1 チケット取り置きフォーム
       .live-field
-        //- h2.live-title Tokyo NIGHT Mikulive.
-        //- ul.live-info
-        //-   li PLACE: 吉祥寺 CLAB SEATA
-        //-   li Open: 19:00, Start 19:30
-        //-   li Ticket: ¥1,000-
+        h3.center 【チケット取り置き手順】
+        ul
+          li ① ↑のフォームにメールアドレスまたはtwitterIDを入力し送信！
+          li ② 出てきた画面をスクリーンショットして保存！
+          li ③ 当日、会場でのチケット購入時にスクショ画面をスタッフにお見せください！
+
       .form-field
         //- form(class="cp_ipcheck" name="ticket" method="POST" action="./success.html" netlify)
         form(class="cp_ipcheck" name="ticket" method="GET" action="./success.html" netlify)
           p.check
             label
-              <input class="option-input02 checkbox" type="checkbox" name="attend" value="attend" onKeyUp="save()"/> チケットを取りおく(¥1,000-)
+              <input placeholder="✔" class="option-input02 checkbox" type="checkbox" name="attend" value="attend" onKeyUp="save()"/> チケットを取りおく(¥1,000-)
           p.twitter
             label Twitter ID
               input(type="text" id="twitter-value" name="twitter" placeholder="@TwitterID" onKeyUp="save()")

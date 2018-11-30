@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Iceland');
+// @import url('https://fonts.googleapis.com/css?family=Iceland');
 @import url('https://fonts.googleapis.com/css?family=Raleway');
 @import "./_media_query"
 @import "./_checkbox"
@@ -33,9 +33,19 @@ body
     // font-size: 3em
     text-align: center;
   .live-field
-    width: 100%
-    .live-title
-      font-family: arial, sans-serif;
+    h3
+      text-align: center;
+    ul
+      padding: 0
+      list-style: none;
+      li
+        margin-bottom: 0.5em
+        font-weight: bold;
+        text-align: center;
+    width: fit-content
+    box-sizing: border-box;
+    margin: 0 auto;
+
   .form-field
     background: rgb(79, 79, 79)
     width: 100%
@@ -89,6 +99,7 @@ body
         margin-top: 0
       .check
         padding-top:1em
+        width: 100%
 
 
 .success
@@ -99,6 +110,7 @@ body
     text-align: center;
     width: 100%
   .palette
+    background-color: #f6f6f6
     box-sizing: border-box;
     padding-bottom: 2em
     z-index: -1
