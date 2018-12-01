@@ -85,6 +85,10 @@ gulp.task('build', [
   'img-copy',
   'js-min'
 ])
+gulp.task('release',[
+  'build',
+  'server'
+])
 gulp.task('default',[
   'pug',
   'stylus',
