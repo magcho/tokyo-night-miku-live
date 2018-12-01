@@ -197,37 +197,83 @@ body
       left: 0;
       width: 100%;
       height: 100%;
-  .youtube
-    h2
-      +mq(pc)
-        font-family: 'Iceland', cursive;
-        font-size: 4em
-        margin: 0 auto
-        border-bottom: double 5px white;
-        width: fit-content
-        margin: 0 auto
-        margin-bottom: 1em
-        margin-top: 2em;
-      +mq(sm)
-        font-family: 'Iceland', cursive;
-        font-size: 3em
-        // text-decoration: underline;
-        border-bottom: double 5px white;
-        width: fit-content
-        margin: 0 auto
-        margin-bottom: 1em
+  .theme-music
+    .youtube
+      h2
+        +mq(pc)
+          font-family: 'Iceland', cursive;
+          font-size: 4em
+          margin: 0 auto
+          border-bottom: double 5px white;
+          width: fit-content
+          margin: 0 auto
+          margin-bottom: 1em
+          margin-top: 2em;
+        +mq(sm)
+          font-family: 'Iceland', cursive;
+          font-size: 3em
+          // text-decoration: underline;
+          border-bottom: double 5px white;
+          width: fit-content
+          margin: 0 auto
+          margin-bottom: 1em
+          margin-top: 1em
+      .youtube-feild
         margin-top: 1em
-    .youtube-feild
-      margin-top: 1em
-      position:relative;
-      width:100%;
-      padding-top:56.25%;
-      iframe
-        position:absolute;
-        top:0;
-        right:0;
+        position:relative;
         width:100%;
-        height:100%;
+        padding-top:56.25%;
+        iframe
+          position:absolute;
+          top:0;
+          right:0;
+          width:100%;
+          height:100%;
+    .member-info
+      margin-top: 1em
+      margin-bottom: 2em
+      overflow: auto;
+      .l,.r
+        width: 50%
+        box-sizing: border-box;
+        float: left;
+
+      a
+        color: rgb(226, 245, 255);
+        text-decoration: underline;
+        &:hover
+          color:rgb(151, 199, 224)
+      h3
+        text-align: center;
+        font-size: 2em
+        margin: 0
+        font-weight: lighter;
+        // border-bottom: dotted 3px white;
+        width: fit-content
+        margin: 0 auto
+      ul
+        list-style:none;
+        +mq(sm)
+          padding-left: 1em
+        li
+          word-break: keep-all;
+          display: inline;
+          +mq(pc)
+            margin-right: 1em
+      img
+        width: 70%
+        margin: 0 auto;
+        border-radius: 100%
+      p.illustrator
+        text-align: right;
+        font-size: 0.5em
+
+        +mq(pc)
+          display: block;
+    .l
+      img
+        display: block;
+
 
   .ticket
     h2
