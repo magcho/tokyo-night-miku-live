@@ -1,41 +1,6 @@
 {
   "name": "tokyo-night-miku-live",
   "version": "1.0.0",
-<<<<<<< HEAD
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "serve": "browser-sync start --server --serveStatic dist --files 'css/*.css, js/*.js, *.html'",
-    "build": "npm run build:sass & npm run build:pug",
-    "build:sass": "node-sass --include-path scss scss/style.scss css/style.css",
-    "build:pug": "pug ./pug -o ./ --pretty",
-    "watch": "npm run serve & npm run watch:sass & npm run watch:pug",
-    "watch:sass": "nodemon -e scss -x \"npm run build:sass\"",
-    "watch:pug": "nodemon -e pug -x \"npm run build:pug\"",
-    "release": "npm run release:sass & npm run release:pug",
-    "release:sass": "node-sass --include-path scss scss/style.scss css/style.css --output-style compressed",
-    "release:pug": "pug ./pug -o ./",
-    "ws": "ws",
-    "pug": "pug",
-    "sass": "node-sass"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/magcho/tokyo-night-miku-live.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/magcho/tokyo-night-miku-live/issues"
-  },
-  "homepage": "https://github.com/magcho/tokyo-night-miku-live#readme",
-  "devDependencies": {
-    "browser-sync": "^2.23.7",
-    "local-web-server": "^2.5.2",
-    "node-sass": "^4.9.0",
-    "nodemon": "^1.17.3",
-    "pug-cli": "^1.0.0-alpha6"
-=======
   "main": "index.js",
   "repository": "https://github.com/magcho/tokyo-night-miku-live.git",
   "author": "magcho <mail@magcho.com>",
@@ -52,6 +17,5 @@
     "gulp-stylus": "^2.7.0",
     "webpack": "^4.27.1",
     "webpack-cli": "^3.1.2"
->>>>>>> v2/release
   }
 }
