@@ -57,6 +57,7 @@ typings/
 # dotenv environment variables file
 .env
 
+<<<<<<< HEAD
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -119,6 +120,13 @@ LICENSE
 
 
 ### https://github.com/github/gitignore/blob/master/Node.gitignore
+=======
+
+# Created by https://www.gitignore.io/api/node
+# Edit at https://www.gitignore.io/?templates=node
+
+### Node ###
+>>>>>>> v2/release
 # Logs
 logs
 *.log
@@ -141,7 +149,11 @@ coverage
 # nyc test coverage
 .nyc_output
 
+<<<<<<< HEAD
 # Grunt intermediate storage (http://gruntjs.com/creating-plugins#storing-task-files)
+=======
+# Grunt intermediate storage (https://gruntjs.com/creating-plugins#storing-task-files)
+>>>>>>> v2/release
 .grunt
 
 # Bower dependency directory (https://bower.io/)
@@ -178,5 +190,30 @@ typings/
 # dotenv environment variables file
 .env
 
+<<<<<<< HEAD
 # next.js build output
 .next
+=======
+# parcel-bundler cache (https://parceljs.org/)
+.cache
+
+# next.js build output
+.next
+
+# nuxt.js build output
+.nuxt
+
+# vuepress build output
+.vuepress/dist
+
+# Serverless directories
+.serverless
+
+# FuseBox cache
+.fusebox/
+
+# End of https://www.gitignore.io/api/node
+
+.DS_Store
+public/
+>>>>>>> v2/release

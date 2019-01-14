@@ -1,6 +1,7 @@
 {
   "name": "tokyo-night-miku-live",
   "version": "1.0.0",
+<<<<<<< HEAD
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -34,5 +35,23 @@
     "node-sass": "^4.9.0",
     "nodemon": "^1.17.3",
     "pug-cli": "^1.0.0-alpha6"
+=======
+  "main": "index.js",
+  "repository": "https://github.com/magcho/tokyo-night-miku-live.git",
+  "author": "magcho <mail@magcho.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "browser-sync": "^2.26.3",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-clean-css": "^4.0.0",
+    "gulp-minify": "^3.1.0",
+    "gulp-plumber": "^1.2.0",
+    "gulp-pug": "^4.0.1",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-stylus": "^2.7.0",
+    "webpack": "^4.27.1",
+    "webpack-cli": "^3.1.2"
+>>>>>>> v2/release
   }
 }

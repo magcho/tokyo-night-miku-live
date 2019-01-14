@@ -1,0 +1,441 @@
+// mixins
+$debug = false
+@import url('https://fonts.googleapis.com/css?family=Iceland');
+@import "./_media_query"
+@font-face {
+  font-family: 'fontello';
+  src: url('../img/fontello/font/fontello.eot?85156702');
+  src: url('../img/fontello/font/fontello.eot?85156702#iefix') format('embedded-opentype'),
+       url('../img/fontello/font/fontello.woff2?85156702') format('woff2'),
+       url('../img/fontello/font/fontello.woff?85156702') format('woff'),
+       url('../img/fontello/font/fontello.ttf?85156702') format('truetype'),
+       url('../img/fontello/font/fontello.svg?85156702#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/**
+ * animation-setting(delay)
+ * @param {int} delayの秒数(ms)していなしで0ms
+ */
+if debug
+  $logoFadeTime = 1ms
+else
+  $logoFadeTime = 800ms
++mq(sm)
+  .pc
+    display: none;
++mq(pc)
+  .sm
+    display: none;
+
+
+body
+  // background: white
+  background: black
+  margin: 0
+  transition-delay: 200ms;
+  transition-duration: 800ms
+  transition-timing-function: ease;
+#first-view
+  // height: 100%
+  // overflow: auto;
+  width: 70%
+  margin: 0 auto;
+  background: black
+
+  header
+    #blind-cover
+      transition-duration: 800ms
+      transition-delay: 200ms
+      transition-timing-function: ease;
+      position: fixed;
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      background: black
+      opacity: 1
+      z-index: 1
+
+    margin: 0 auto;
+    position: relative;
+    height: 100% // jsで書き換えする
+    overflow-x: hidden;
+    &:before
+      padding: 100%;
+    &:after
+      content: ""
+
+    #logo1,#logo2
+      transition-duration: 800ms
+      transition-timing-function: ease;
+      position: absolute;
+      width: 100%
+      margin: auto 0
+
+    #logo1
+      z-index: 3
+      opacity: 1
+      #animation-svg
+        position: relative;
+        width: 100%
+        height: auto;
+
+    #logo2
+      z-index: 2
+      opacity: 0
+      height: 100%
+      position: absolute;
+      left:50%
+      // top: 50%
+      img
+        display: block;
+        width: 100%
+        height: auto;
+        transform: translateX(-50%)
+
+.fixed
+  +mq(sm)
+    display: none
+  z-index: 10
+  position: fixed;
+  bottom: 1em;
+  font-size: 3em
+  ul
+    list-style: none;
+    li
+      font-family: fontello
+      float: left;
+      margin-right: 0.4em
+      color: white
+      &:hover
+        color: rgb(138, 138, 138)
+.container
+  width: 100%
+  margin: 0 auto
+  background-image: url('../img/back/bak.jpg');
+.area
+  font-family: arial, sans-serif;
+  font-weight: lighter;
+  width: 100%
+  // height: 100%
+  +mq(pc)
+    padding: 10em
+  +mq(sm)
+    padding: 3em 0
+    margin-bottom: 5em
+  // margin: 0 auto
+  // background-color: rgba(212, 212, 212, 1);
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+
+  background-attachment: fixed;
+  background-position: left center;
+  background-size:contain;
+  background-repeat: no-repeat;
+
+  +mq(pc)
+    .right
+      box-sizing: border-box
+      width: 50%
+      margin-left: 50%
+  +mq(sm)
+    .right
+      width: 100%
+#event
+
+  +mq(pc)
+    background-image: url('../img/back/back-event-ink.svg')
+  color: white
+  img
+    margin-top: 2em
+    display: block;
+    width: 100%
+  #livetitle
+    font-family: 'Iceland', cursive;
+    +mq(pc)
+      h2
+        margin: 0 auto
+        font-size: 3em
+    +mq(sm)
+      h2
+        text-align: center;
+        // text-decoration: underline;
+        border-bottom: double 6px white;
+        width: fit-content
+        text-rendering: geometricPrecision
+        font-size: 5em
+        margin: 0 auto;
+        padding: 0
+
+
+
+
+  .description
+    text-align: center;
+    padding-left: 1em
+    font-weight: lighter;
+    margin-bottom: 0;
+    margin-top: 0.8em
+
+  ul
+    text-align: center;
+    list-style: none;
+    font-weight: lighter;
+
+  .map-feild
+    margin-top: 2em
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+    iframe,object,embed
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+  .theme-music
+    .youtube
+      h2
+        +mq(pc)
+          font-family: 'Iceland', cursive;
+          font-size: 4em
+          margin: 0 auto
+          border-bottom: double 5px white;
+          width: fit-content
+          margin: 0 auto
+          margin-bottom: 1em
+          margin-top: 2em;
+        +mq(sm)
+          font-family: 'Iceland', cursive;
+          font-size: 3em
+          // text-decoration: underline;
+          border-bottom: double 5px white;
+          width: fit-content
+          margin: 0 auto
+          margin-bottom: 1em
+          margin-top: 1em
+      .youtube-feild
+        margin-top: 1em
+        position:relative;
+        width:100%;
+        padding-top:56.25%;
+        iframe
+          position:absolute;
+          top:0;
+          right:0;
+          width:100%;
+          height:100%;
+    .member-info
+      margin-top: 1em
+      margin-bottom: 2em
+      overflow: auto;
+      .l,.r
+        width: 50%
+        box-sizing: border-box;
+        float: left;
+
+      a
+        color: rgb(226, 245, 255);
+        text-decoration: underline;
+        &:hover
+          color:rgb(151, 199, 224)
+      h3
+        text-align: center;
+        font-size: 2em
+        margin: 0
+        font-weight: lighter;
+        // border-bottom: dotted 3px white;
+        width: fit-content
+        margin: 0 auto
+      ul
+        list-style:none;
+        +mq(sm)
+          padding-left: 1em
+        li
+          word-break: keep-all;
+          display: inline;
+          +mq(pc)
+            margin-right: 1em
+      img
+        width: 70%
+        margin: 0 auto;
+        border-radius: 100%
+      p.illustrator
+        text-align: right;
+        font-size: 0.5em
+
+        +mq(pc)
+          display: block;
+    .l
+      img
+        display: block;
+
+
+  .ticket
+    h2
+      +mq(pc)
+        font-family: 'Iceland', cursive;
+        font-size: 4em
+        margin: 0 auto
+        border-bottom: double 5px white;
+        width: fit-content
+        margin: 0 auto
+        margin-bottom: 1em
+        margin-top: 2em;
+      +mq(sm)
+        font-family: 'Iceland', cursive;
+        font-size: 3em
+        // text-decoration: underline;
+        border-bottom: double 5px white;
+        width: fit-content
+        margin: 0 auto
+        margin-bottom: 1em
+        margin-top: 1em
+    a
+      text-decoration: underline;
+      color: white
+      button
+        margin-bottom: 1em
+        display: block;
+        width: 100%
+        // margin: 0 auto;
+        border:solid 1px #ccc;
+        box-sizing: border-box;
+        padding:15px 30px;
+        // margin:0 0 20px;
+        font-family:Arial, sans-serif;
+        font-size:1.5em;
+        text-transform:uppercase;
+        font-weight:bold;
+        color: white
+        background-color: rgb(150, 150, 150)
+        &:hover
+          background-color: rgb(108, 108, 108)
+        cursor:pointer;
+
+    .infomation-text
+      p
+        width: 100%
+        padding: 0 1em
+        box-sizing: border-box;
+        margin-bottom: 2em
+      .center
+        text-align: center;
+      ul
+        margin: 0 0
+        padding: 0 1em
+        list-style: none;
+        li
+          margin-bottom: 0.5em
+          font-weight: bold;
+      img
+        max-width: 70%
+        margin: 0 auto;
+        display: block;
+#act
+  +mq(pc)
+    background-image: url('../img/back/back-act-ink.svg')
+  color: white
+  .act-section
+    +mq(pc)
+      font-family: 'Iceland', cursive;
+      font-size: 4em
+      margin: 0 auto
+    +mq(sm)
+      font-family: 'Iceland', cursive;
+      font-size: 3em
+      // text-decoration: underline;
+      border-bottom: double 5px white;
+      width: fit-content
+      margin: 0 auto
+      margin-bottom: 1em
+
+  +mq(sm)
+    .sm
+      position: relative;
+      float: none;
+      display: block;
+      width: 100%
+  #vocal
+    margin-bottom: 5em
+
+    .vocaloid
+      width: fit-content
+      margin: 0 auto;
+      h3
+        margin-left: 2em
+        margin: 0 auto;
+        margin-bottom: 0;
+        margin-top: 0.5em
+        margin-right: 1em
+        display: inline
+        border-bottom: dotted 3px white;
+        width: fit-content
+
+
+  #band-member
+    .member-info
+      margin-top: 1em
+      margin-bottom: 2em
+      overflow: auto;
+      .l,.r
+        width: 50%
+        box-sizing: border-box;
+        float: left;
+
+      a
+        color: rgb(226, 245, 255);
+        text-decoration: underline;
+        &:hover
+          color:rgb(151, 199, 224)
+      h3
+        text-align: center;
+        font-size: 2em
+        margin: 0
+        font-weight: lighter;
+        border-bottom: dotted 3px white;
+        width: fit-content
+        margin: 0 auto
+      ul
+        list-style:none;
+        +mq(sm)
+          padding-left: 1em
+        li
+          word-break: keep-all;
+          display: inline;
+          +mq(pc)
+            margin-right: 1em
+      img
+        width: 70%
+        margin: 0 auto;
+        border-radius: 100%
+
+        +mq(pc)
+          display: block;
+    .l
+      img
+        display: block;
+
+
+#sns
+  +mq(pc)
+    background-image: url('../img/back/back-info-ink.svg')
+  color: white
+
+
+
+
+footer
+  font-family: arial, sans-serif;
+  font-weight: lighter;
+  text-align: center;
+  width: 100%
+  color: rgb(111, 111, 111)
+  a
+    color: rgb(111, 111, 111)
+    &:hover
+      color: rgb(150, 150, 150)
