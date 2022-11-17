@@ -16,6 +16,6 @@
     "gulp-sourcemaps": "^2.6.5",
     "gulp-stylus": "^2.7.0",
     "webpack": "^4.40.2",
-    "webpack-cli": "^3.3.9"
+    "webpack-cli": "^3.3.12"
   }
 }
